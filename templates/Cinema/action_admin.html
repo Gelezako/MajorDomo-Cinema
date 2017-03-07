@@ -1,0 +1,24 @@
+<div id='api_settings'>
+    &nbsp;
+    <form action="?" method="get" enctype="multipart/form-data" name="save_settings" class="form-horizontal">
+        <fieldset>
+
+<h3>Выберите ваш город:</h3><br><br>
+     <select name="region">
+     <option value="" [#if region="" #] disabled selected="selected"> - Выберите ваш город -</option>
+	 <option value="1" [#if region="1" #]  selected[#endif#]>Киев ТРЦ «Блокбастер»</option>
+	 <option value="2" [#if region="2" #]  selected[#endif#]>Харьков) ТРЦ «Французький Бульвар»</option>
+     <option value="3" [#if region="3" #]  selected[#endif#]>Одеса ТРЦ «City Center»</option>
+     <option value="4" [#if region="5" #]  selected[#endif#]>Одеса ТРЦ «City Center Котовський»</option>
+	 <option value="5" [#if region="5" #]  selected[#endif#]>Львов ТРЦ «King Cross Leopolis»</option>
+	 <option value="6" [#if region="6" #]  selected[#endif#]>Сумы ТРЦ «Мануфактура»</option>
+     <option value="7" [#if region="7" #]  selected[#endif#]>Ялта Сатурн</option>
+
+
+<button type="submit" name="subm" value="settings" class="btn btn-primary">Выбрать</button><br><br>
+<label name="notification"><#LANG_NOTIFICATION#></label>
+ <br>
+ </fieldset>
+</form><br><br>
+<a href="http://majordomo.smartliving.ru/forum/" target="_blank">Обсуждение модуля на форуме</a>.<br>
+</div>
