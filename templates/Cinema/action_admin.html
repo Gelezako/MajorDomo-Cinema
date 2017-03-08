@@ -4,15 +4,15 @@
         <fieldset>
 
 <h3>Выберите ваш город:</h3><br><br>
-     <select name="region">
-     <option value="" [#if region="" #] disabled selected="selected"> - Выберите ваш город -</option>
-	 <option value="1" [#if region="1" #]  selected[#endif#]>Киев ТРЦ «Блокбастер»</option>
-	 <option value="2" [#if region="2" #]  selected[#endif#]>Харьков) ТРЦ «Французький Бульвар»</option>
-     <option value="3" [#if region="3" #]  selected[#endif#]>Одеса ТРЦ «City Center»</option>
-     <option value="4" [#if region="5" #]  selected[#endif#]>Одеса ТРЦ «City Center Котовський»</option>
-	 <option value="5" [#if region="5" #]  selected[#endif#]>Львов ТРЦ «King Cross Leopolis»</option>
-	 <option value="6" [#if region="6" #]  selected[#endif#]>Сумы ТРЦ «Мануфактура»</option>
-     <option value="7" [#if region="7" #]  selected[#endif#]>Ялта Сатурн</option>
+     <select name="URL">
+     <option value="" [#if URL="" #] disabled selected="selected"> - Выберите ваш город -</option>
+	 <option value="http://planetakino.ua/ua/showtimes/xml/" [#if URL="http://planetakino.ua/ua/showtimes/xml/" #]  selected[#endif#]>Киев ТРЦ «Блокбастер»</option>
+	 <option value="http://planeta-kino.com.ua/kharkov/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/kharkov/ua/showtimes/xml/" #]  selected[#endif#]>Харьков ТРЦ «Французький Бульвар»</option>
+     <option value="http://planeta-kino.com.ua/odessa2/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/odessa2/ua/showtimes/xml/" #]  selected[#endif#]>Одеса ТРЦ «City Center»</option>
+     <option value="http://planeta-kino.com.ua/odessa/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/odessa/ua/showtimes/xml/" #]  selected[#endif#]>Одеса ТРЦ «City Center Котовський»</option>
+	 <option value="http://planeta-kino.com.ua/lvov/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/lvov/ua/showtimes/xml/" #]  selected[#endif#]>Львов ТРЦ «King Cross Leopolis»</option>
+	 <option value="http://planeta-kino.com.ua/sumy/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/sumy/ua/showtimes/xml/" #]  selected[#endif#]>Сумы ТРЦ «Мануфактура»</option>
+     <option value="http://saturn-imax.ru/showtimes/xml/" [#if URL="http://saturn-imax.ru/showtimes/xml/" #]  selected[#endif#]>Ялта Сатурн</option></select>
 
 
 <button type="submit" name="subm" value="settings" class="btn btn-primary">Выбрать</button><br><br>
