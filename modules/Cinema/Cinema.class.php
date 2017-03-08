@@ -120,18 +120,15 @@ public function admin(&$out) {
 
 global $URL;
 if(isset($URL)){
-        $this->SaveData($URL);
+        sg("City.URL",$URL);
     }
+$this->get_settings($out,$URL);
 }
 
-$this->get_settings($out,$region);
-}
 
-
-public function get_settings(&$out,$region)
+public function get_settings(&$out,$URL)
 {
     $out["URL"] = $URL;
-
 }
 /**
 * FrontEnd
