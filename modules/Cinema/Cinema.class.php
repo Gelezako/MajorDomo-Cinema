@@ -169,7 +169,7 @@ public function get_settings(&$out,$URL)
             $obj_rec['ID'] = SQLInsert('objects', $obj_rec);
         }
     }
-	addClassProperty('City', 'URL', 'include_once(DIR_MODULES."Cinema/Cinema.class.php");');
+	//addClassProperty('City', 'URL', 'include_once(DIR_MODULES."Cinema/Cinema.class.php");');
 	parent::install();
  }
 
