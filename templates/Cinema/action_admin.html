@@ -5,18 +5,20 @@
 * @version 0.1 (wizard, 11:02:06 [Feb 06, 2017])
 -->
 
-<h3>Фильмы в кинотеатре</h3><br>
+<script src="https://use.fontawesome.com/7a155330f4.js"></script>
+
+<h3><#LANG_CI_APP_NAME#></h3><br>
 
 <div class="float-right">
-	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#about">О модуле&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign icon-white"></span>
+	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#about"><#LANG_CI_APP_ABOUT#>&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign icon-white"></span>
 	</button>
 </div>
 <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="about1" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h4 class="modal-title">Фильмы в кинотеатре</h4>
+				<button class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><#LANG_CI_APP_CLOSE#></span></button>
+				<h4 class="modal-title"><#LANG_CI_APP_NAME#></h4>
 			</div>
 			<div class="modal-body">
 				<div class="float-right">
@@ -24,18 +26,18 @@
 					<br><br><p><b>v.0.1</b></p>
 				</div>
                 <p class="float-left">
-					Модуль "Фильмы в кинотеатре"<br><br>
-					Обсуждение модуля на <a href="http://majordomo.smartliving.ru/forum/viewtopic.php?f=5&t=3796" target="_blank">форуме</a>.<br>
-					Проект на <a href="https://github.com/Gelezako/MajorDomo-Cinema" target="_blank">Github</a>.<br>
-					Проект в <a href="https://connect.smartliving.ru/addons/category3/86.html" target="_blank">Connect</a>.<br>
+					<#LANG_CI_APP_MODULE#> "<#LANG_CI_APP_NAME#>"<br><br>
+					<a href="http://majordomo.smartliving.ru/forum/viewtopic.php?f=5&t=3796" target="_blank"><#LANG_CI_APP_DISCUS#></a>.<br>
+					<#LANG_CI_APP_PROJ#> <a href="https://github.com/Gelezako/MajorDomo-Cinema" target="_blank">Github</a>.<br>
+					<#LANG_CI_APP_PROJ#> <a href="https://connect.smartliving.ru/addons/category3/86.html" target="_blank">Connect</a>.<br>
 				</p>
 				<hr size="1">
 				<p class="float-left">
-				Поддержать разработку и развитие модуля:
+				<#LANG_CI_APP_DONATE#>
 				<ul>
-				    <li>Страничка для доната в: <a href="https://www.liqpay.ua/ru/checkout/380972054741" target="_blank">Liqpay</a></li>
-					<li>Страничка для доната в: <a href="https://www.patreon.com/user?u=8755313" target="_blank">Patreon</a></li>
-					<li>Внутренний счет в <a href="https://connect.smartliving.ru/tasks/67.html" target="_blank">Connect</a></li>
+				    <li><#LANG_CI_APP_DONATE2#> <a href="https://www.liqpay.ua/ru/checkout/380972054741" target="_blank">Liqpay</a></li>
+					<li><#LANG_CI_APP_DONATE2#> <a href="https://www.patreon.com/user?u=8755313" target="_blank">Patreon</a></li>
+					<li><#LANG_CI_APP_DONATE3#> <a href="https://connect.smartliving.ru/tasks/67.html" target="_blank">Connect</a></li>
 					<li>WMZ: Z361986620412</li>
 					<li>WMR: R202811747775</li>
 					<li>WMU: U201862406146</li>
@@ -44,8 +46,8 @@
                 </p>
 			</div>
 			<div class="modal-footer">
-				<div class="pull-left">Автор: <a href="https://telegram.me/gelezako" target="_blank">Gelezako</a></div>
-				<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+				<div class="pull-left"><#LANG_CI_APP_Author#>: <a href="https://telegram.me/gelezako" target="_blank">Gelezako</a></div>
+				<button type="button" class="btn btn-default" data-dismiss="modal"><#LANG_CI_APP_CLOSE#></button>
 			</div>
 		</div>
 	</div>
@@ -62,22 +64,22 @@
     <form action="?" method="get" enctype="multipart/form-data" name="save_settings" class="form-horizontal">
         <fieldset>
 
-<h3>Выберите ваш город:</h3><br><br>
+<h3><#LANG_CI_APP_SELECT#>:</h3><br><br>
      <select name="URL">
-     <option value="" [#if URL="" #] disabled selected="selected"> - Выберите ваш город -</option>
-	 <option value="http://planetakino.ua/ua/showtimes/xml/" [#if URL="http://planetakino.ua/ua/showtimes/xml/" #]  selected[#endif#]>Киев ТРЦ «Блокбастер»</option>
-	 <option value="http://planeta-kino.com.ua/kharkov/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/kharkov/ua/showtimes/xml/" #]  selected[#endif#]>Харьков ТРЦ «Французький Бульвар»</option>
-     <option value="http://planeta-kino.com.ua/odessa2/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/odessa2/ua/showtimes/xml/" #]  selected[#endif#]>Одеса ТРЦ «City Center»</option>
-     <option value="http://planeta-kino.com.ua/odessa/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/odessa/ua/showtimes/xml/" #]  selected[#endif#]>Одеса ТРЦ «City Center Котовський»</option>
-	 <option value="http://planeta-kino.com.ua/lvov/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/lvov/ua/showtimes/xml/" #]  selected[#endif#]>Львов ТРЦ «King Cross Leopolis»</option>
-	 <option value="http://planeta-kino.com.ua/sumy/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/sumy/ua/showtimes/xml/" #]  selected[#endif#]>Сумы ТРЦ «Мануфактура»</option>
-     <option value="http://saturn-imax.ru/showtimes/xml/" [#if URL="http://saturn-imax.ru/showtimes/xml/" #]  selected[#endif#]>Ялта Сатурн</option></select>
+     <option value="" [#if URL="" #] disabled selected="selected"> - <#LANG_CI_APP_SELECT#> -</option>
+	 <option value="http://planetakino.ua/ua/showtimes/xml/" [#if URL="http://planetakino.ua/ua/showtimes/xml/" #]  selected[#endif#]><#LANG_CI_APP_KIEV#></option>
+	 <option value="http://planeta-kino.com.ua/kharkov/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/kharkov/ua/showtimes/xml/" #]  selected[#endif#]><#LANG_CI_APP_KHARKOV#></option>
+     <option value="http://planeta-kino.com.ua/odessa2/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/odessa2/ua/showtimes/xml/" #]  selected[#endif#]><#LANG_CI_APP_ODESSA#></option>
+     <option value="http://planeta-kino.com.ua/odessa/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/odessa/ua/showtimes/xml/" #]  selected[#endif#]><#LANG_CI_APP_ODESSA2#></option>
+	 <option value="http://planeta-kino.com.ua/lvov/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/lvov/ua/showtimes/xml/" #]  selected[#endif#]><#LANG_CI_APP_Lvov#></option>
+	 <option value="http://planeta-kino.com.ua/sumy/ua/showtimes/xml/" [#if URL="http://planeta-kino.com.ua/sumy/ua/showtimes/xml/" #]  selected[#endif#]><#LANG_CI_APP_SUMY#></option>
+     <option value="http://saturn-imax.ru/showtimes/xml/" [#if URL="http://saturn-imax.ru/showtimes/xml/" #]  selected[#endif#]><#LANG_CI_APP_YALTA#></option></select>
 
 
-<button type="submit" name="subm" value="settings" class="btn btn-primary">Выбрать</button><br><br>
+<button type="submit" name="subm" value="settings" class="btn btn-primary"><#LANG_SELECT#></button><br><br>
 <label name="notification"><#LANG_NOTIFICATION#></label>
  <br>
  </fieldset>
 </form><br><br>
-<a href="http://majordomo.smartliving.ru/forum/viewtopic.php?f=5&t=3796" target="_blank">Обсуждение модуля на форуме</a>.<br>
+<a href="http://majordomo.smartliving.ru/forum/viewtopic.php?f=5&t=3796" target="_blank"><#LANG_ER_APP_DISCUS#></a>.<br>
 </div>
