@@ -29,6 +29,7 @@ $dictionary = array(
 'CI_APP_Lvov' => 'Львів ТРЦ «King Cross Leopolis»',
 'CI_APP_SUMY' => 'Суми ТРЦ «Мануфактура»',
 'CI_APP_YALTA' => 'Ялта Сатурн',
+);
 
 foreach ($dictionary as $k=>$v)
 {
