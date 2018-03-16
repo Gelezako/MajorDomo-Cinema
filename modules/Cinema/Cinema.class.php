@@ -148,6 +148,12 @@ public function get_settings(&$out,$URL)
 * @access private
 */
  public function install($data='') {
+	parent::install();
+	 
+	@include_once(ROOT.'languages/'.$this->name.'_'.SETTINGS_SITE_LANGUAGE.'.php'); //локализация
+    	@include_once(ROOT.'languages/'.$this->name.'_default'.'.php');
+	SQLExec("UPDATE project_modules SET TITLE='".LANG_CI_APP_NAME."' WHERE NAME='".$this->name."'"); 
+	 
  $className = 'Cinema'; //имя класса
  $objectName = array('City');//имя обьектов
  $objDescription = array('Фильмы в кинотеатре');
@@ -170,7 +176,7 @@ public function get_settings(&$out,$URL)
         }
     }
 	//addClassProperty('City', 'URL', 'include_once(DIR_MODULES."Cinema/Cinema.class.php");');
-	parent::install();
+	
  }
 
  public function uninstall()
